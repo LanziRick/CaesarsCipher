@@ -14,6 +14,7 @@ pipeline {
                 * using `true` to allow the Pipeline to continue nonetheless
                 */
                 //sh 'make check || true'
+                sh 'ls'
                 sh 'make'
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
                 junit '**/target/*.xml'
